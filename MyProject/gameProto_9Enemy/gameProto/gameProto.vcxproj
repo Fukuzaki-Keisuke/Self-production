@@ -175,6 +175,7 @@
     <ClCompile Include="MeshComponent.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="NearEnemy.cpp" />
+    <ClCompile Include="NearEnemyChase.cpp" />
     <ClCompile Include="NearEnemyIdle.cpp" />
     <ClCompile Include="NearEnemyWalk.cpp" />
     <ClCompile Include="PhysicsWorld.cpp" />
@@ -221,6 +222,7 @@
     <ClInclude Include="LevelActor.h" />
     <ClInclude Include="LevelAssetElement.h" />
     <ClInclude Include="NearEnemy.h" />
+    <ClInclude Include="NearEnemyChase.h" />
     <ClInclude Include="NearEnemyIdle.h" />
     <ClInclude Include="NearEnemyWalk.h" />
     <ClInclude Include="PlayerActorStateBase.h" />

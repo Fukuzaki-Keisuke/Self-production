@@ -12,7 +12,6 @@ enum class EnemyStateEnum : unsigned char
 	Spawn,      // 出現
 	Idle,       // 待機状態
 	Walk,       // 歩く
-	Walk2,      // 歩く2
 	Turn,       // ターン
 	Run,        // 走る
 	LookAround, // 見回す

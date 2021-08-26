@@ -252,6 +252,9 @@
     <ClCompile Include="NearEnemyWalk.cpp">
       <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
     </ClCompile>
+    <ClCompile Include="NearEnemyChase.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h">
@@ -450,6 +453,9 @@
       <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
     </ClInclude>
     <ClInclude Include="NearEnemyWalk.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyChase.h">
       <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
     </ClInclude>
   </ItemGroup>

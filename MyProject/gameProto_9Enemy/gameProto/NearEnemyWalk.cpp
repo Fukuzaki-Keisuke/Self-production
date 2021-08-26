@@ -47,14 +47,14 @@ EnemyStateEnum NearEnemyWalk::Update(float deltaTime)
 			mWalkRemainTime = mWalkTime;
 			mTurnNum++;
 
-			//規定回数振り向いたら見渡し行動に移行
-			if (mTurnNum >= mTurnMaxNum)
-			{
-				// 見渡し行動に移行
-				mOwnerActor->SetForwardVec(forward);
-				mOwnerActor->SetComputeWorldTransform();
-				return EnemyStateEnum::Idle;
-			}
+			////規定回数振り向いたら見渡し行動に移行
+			//if (mTurnNum >= mTurnMaxNum)
+			//{
+			//	// 見渡し行動に移行
+			//	mOwnerActor->SetForwardVec(forward);
+			//	mOwnerActor->SetComputeWorldTransform();
+			//	return EnemyStateEnum::Idle;
+			//}
 		}
 	}
 	else
@@ -95,11 +95,11 @@ EnemyStateEnum NearEnemyWalk::Update(float deltaTime)
 	float distance = distanceVec.Length();
 
 
-	////位置によってステートを変える
-	//if (distance <= 1300)
-	//{
-	//	return EnemyStateEnum::Chase;
-	//}
+	//位置によってステートを変える
+	if (distance <= 1300)
+	{
+		return EnemyStateEnum::Chase;
+	}
 
 	// 歩き行動継続
 	return EnemyStateEnum::Walk;

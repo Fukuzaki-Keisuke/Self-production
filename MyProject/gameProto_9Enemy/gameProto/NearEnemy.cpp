@@ -13,6 +13,7 @@
 #include "EnemyBehaviorComponent.h"
 #include "NearEnemyIdle.h"
 #include "NearEnemyWalk.h"
+#include "NearEnemyChase.h"
 
 #include <iostream>
 
@@ -34,13 +35,16 @@ NearEnemy::NearEnemy()
 	mSkelMeshComponent->SetSkeleton(RENDERER->GetSkeleton("Assets/Enemy/NearEnemy/NearEnemy_Idle.gpskel"));
 
 	//アニメーションの読み込み
-	mAnimations.emplace(EnemyStateEnum::Idle, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Idle_Anim.gpanim",true));
-	mAnimations.emplace(EnemyStateEnum::Walk, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Walk3.gpanim", false));
+	//最後のtrueはループするかしないか
+	mAnimations.emplace(EnemyStateEnum::Idle, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Idle_Anim.gpanim",false));
+	mAnimations.emplace(EnemyStateEnum::Walk, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Walk1.gpanim", true));
+	mAnimations.emplace(EnemyStateEnum::Chase, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Walk2.gpanim", true));
 
 	// EnemyBehaviorComponentにふるまいを追加
 	mEnemyBehaviorComponent = new EnemyBehaviorComponent(this);
 	mEnemyBehaviorComponent->RegisterState(new NearEnemyIdle(mEnemyBehaviorComponent));
 	mEnemyBehaviorComponent->RegisterState(new NearEnemyWalk(mEnemyBehaviorComponent));
+	mEnemyBehaviorComponent->RegisterState(new NearEnemyChase(mEnemyBehaviorComponent));
 	mEnemyBehaviorComponent->SetFirstState(EnemyStateEnum::Walk);
 
 	//敵キャラの当たり判定を追加
