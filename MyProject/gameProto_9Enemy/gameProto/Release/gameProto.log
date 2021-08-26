@@ -1,7 +1,76 @@
-﻿  NearEnemyChase.cpp
+﻿  Actor.cpp
+  Animation.cpp
+  AudioManager.cpp
+  BGBlock.cpp
+  BitmapText.cpp
+  BlackKnightActor.cpp
+  BoneTransform.cpp
+  BoxCollider.cpp
+  CameraActor.cpp
+  coin.cpp
+  Collision.cpp
+  DebugGrid.cpp
+  DepthMap.cpp
+  EnemyActorBase.cpp
+  EnemyAttack.cpp
+  EnemyBehaviorComponent.cpp
+  EnemyChase.cpp
+  EnemyDeath.cpp
+  EnemyHit.cpp
+  EnemyLookAround.cpp
+  コンパイル中...
+  EnemyPatrol.cpp
+  EnemyShot.cpp
+  Game.cpp
+  GameClearScene.cpp
+C:\Users\reguf\Desktop\GitHub\Self-production\MyProject\gameProto_9Enemy\gameProto\GameClearScene.cpp(31,14): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  GameOverScene.cpp
+C:\Users\reguf\Desktop\GitHub\Self-production\MyProject\gameProto_9Enemy\gameProto\GameOverScene.cpp(31,14): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  HDRRenderer.cpp
+  InputController.cpp
+  LevelActor.cpp
+  LevelManager.cpp
+  LookDownCamera.cpp
+  main.cpp
+  Math.cpp
+  Mesh.cpp
+  MeshComponent.cpp
+  Music.cpp
+  NearEnemy.cpp
+  NearEnemyChase.cpp
+  NearEnemyIdle.cpp
+  NearEnemyWalk.cpp
+  PhysicsWorld.cpp
+  コンパイル中...
+  PlayerActor.cpp
+  PlayerActorStateHIt.cpp
+  PlayerActorStateIdle.cpp
+  PlayerActorStateJump.cpp
+  PlayerActorStateJumpEnd.cpp
+  PlayerActorStateJumpLoop.cpp
+  PlayerActorStateLightAttack1.cpp
+  PlayerActorStateLightAttack2.cpp
+  PlayerActorStateLightAttack3.cpp
+  PlayerActorStateRun.cpp
+  RapidJsonHelper.cpp
+  Renderer.cpp
+  Input.cpp
+  Component.cpp
+  Shader.cpp
+  SkeletalMeshComponent.cpp
+  Skeleton.cpp
+  sound.cpp
+  TestScene.cpp
+C:\Users\reguf\Desktop\GitHub\Self-production\MyProject\gameProto_9Enemy\gameProto\TestScene.cpp(171,7): warning C4101: 'buf': ローカル変数は 1 度も使われていません。
+  Texture.cpp
+  コンパイル中...
+  ThirdPersonCamera.cpp
+  TitleScene.cpp
+C:\Users\reguf\Desktop\GitHub\Self-production\MyProject\gameProto_9Enemy\gameProto\TitleScene.cpp(30,14): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+  VertexArray.cpp
   コード生成しています。
-  1 of 3819 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    14 functions had inline decision re-evaluated but remain unchanged
+  3794 of 3819 functions (99.3%) were compiled, the rest were copied from previous compilation.
+    638 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
   コード生成が終了しました。
-  gameProto.vcxproj -> C:\Users\reguf\Desktop\MyProject\gameProto_9Enemy\Release\gameProto.exe
+  gameProto.vcxproj -> C:\Users\reguf\Desktop\GitHub\Self-production\MyProject\gameProto_9Enemy\Release\gameProto.exe
