@@ -59,6 +59,9 @@ public:
 	void									 SetAttackHitBox();		//“–‚½‚è”»’è‚Ì•t—^
 	void									 RemoveAttackHitBox();	//“–‚½‚è”»’è‚ÌÁ‹
 
+	//“G‚Ì‹ßÚUŒ‚‚Æ‚Ì“–‚½‚è”»’è
+	void									 HitEnemyAttackDamage(class BoxCollider* hitPlayerBox, class BoxCollider* mEnemyAttackBox);
+
 	//“G‚Ì’e‚Æ‚Ì“–‚½‚è”»’è
 	void									 HitBullet(class BoxCollider* hitPlayerBox, class BoxCollider* mEnemyShotBox);	//‘ÎÛ‚Æ‚Ì“–‚½‚è”»’è‚Ì•t—^
 

@@ -175,8 +175,13 @@
     <ClCompile Include="MeshComponent.cpp" />
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="NearEnemy.cpp" />
+    <ClCompile Include="NearEnemyAttack.cpp" />
+    <ClCompile Include="NearEnemyAttack2.cpp" />
     <ClCompile Include="NearEnemyChase.cpp" />
+    <ClCompile Include="NearEnemyDie.cpp" />
+    <ClCompile Include="NearEnemyHit.cpp" />
     <ClCompile Include="NearEnemyIdle.cpp" />
+    <ClCompile Include="NearEnemyLookAround.cpp" />
     <ClCompile Include="NearEnemyWalk.cpp" />
     <ClCompile Include="PhysicsWorld.cpp" />
     <ClCompile Include="PlayerActor.cpp" />
@@ -222,8 +227,13 @@
     <ClInclude Include="LevelActor.h" />
     <ClInclude Include="LevelAssetElement.h" />
     <ClInclude Include="NearEnemy.h" />
+    <ClInclude Include="NearEnemyAttack.h" />
+    <ClInclude Include="NearEnemyAttack2.h" />
     <ClInclude Include="NearEnemyChase.h" />
+    <ClInclude Include="NearEnemyDie.h" />
+    <ClInclude Include="NearEnemyHit.h" />
     <ClInclude Include="NearEnemyIdle.h" />
+    <ClInclude Include="NearEnemyLookAround.h" />
     <ClInclude Include="NearEnemyWalk.h" />
     <ClInclude Include="PlayerActorStateBase.h" />
     <ClInclude Include="Animation.h" />

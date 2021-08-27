@@ -11,6 +11,7 @@
 #include "Collision.h"
 #include "coin.h"
 #include "EnemyShot.h"
+#include "NearEnemy.h"
 
 // PhysicsWorldコンストラクタ
 PhysicsWorld::PhysicsWorld()
@@ -172,6 +173,9 @@ void PhysicsWorld::Collision()
 
 	// プレイヤーの攻撃と敵とのヒット調べる
 	PlayerAttackAndEnemyTest();
+
+	//エネミーの近接攻撃とプレイヤーのヒットを調べる
+	EnemyAttackBoxAndPlayerTest();
 
 	// プレイヤーと敵弾のヒットを調べる
 	EnemyAttackAndPlayerTest();
@@ -341,6 +345,22 @@ void PhysicsWorld::PlayerAttackAndEnemyTest()
 			{
 				dynamic_cast<EnemyActorBase*>(e->GetOwner())->OnCollision(e, pa);
 				dynamic_cast<PlayerActor*>(pa->GetOwner())->HitEnemy(pa, e);
+			}
+		}
+	}
+}
+
+//敵近接とプレイヤーの当たり判定
+void PhysicsWorld::EnemyAttackBoxAndPlayerTest()
+{
+	for (auto ea : mEnemyAttackBox)
+	{
+		for (auto p : mPlayerBoxs)
+		{
+			if (Intersect(ea->GetWorldBox(), p->GetWorldBox()))
+			{
+				dynamic_cast<NearEnemy*>(ea->GetOwner())->HitAttackPlayer(ea,p);
+				dynamic_cast<PlayerActor*>(ea->GetOwner())->HitEnemyAttackDamage(ea, p);
 			}
 		}
 	}

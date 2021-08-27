@@ -255,6 +255,21 @@
     <ClCompile Include="NearEnemyChase.cpp">
       <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
     </ClCompile>
+    <ClCompile Include="NearEnemyAttack.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyAttack2.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyLookAround.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyHit.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyDie.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h">
@@ -456,6 +471,21 @@
       <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
     </ClInclude>
     <ClInclude Include="NearEnemyChase.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyAttack.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyAttack2.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyLookAround.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyHit.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyDie.h">
       <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
     </ClInclude>
   </ItemGroup>
