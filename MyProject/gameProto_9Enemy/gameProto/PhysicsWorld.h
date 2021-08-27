@@ -11,6 +11,7 @@ enum class EnumPhysicsType
 	EnumHitCheck,		      // ヒットチェック用（押し返しなし)
 	EnumBGTrigger,            // 背景と接触したかのトリガー
 	EnumPlayerAttack,		  // プレイヤー攻撃判定
+	EnumEnemyAttack,		  // エネミー攻撃班芸
 	EnumEnemyShot			  // 敵の弾の当たり判定
 };
 
@@ -37,6 +38,7 @@ private:
 	std::vector<class BoxCollider*>   mEnemies;					       // 敵キャラ             
 	std::vector<class BoxCollider*>   mBGTriggers;                     // 背景との接触判定用トリガー
 
+	std::vector<class BoxCollider*>   mEnemyAttackBox;				   //プレイヤーの攻撃あたりデータ
 	std::vector<class BoxCollider*>   mEnemyShotBox;				   //敵弾のあたりデータ
 
 	void PlayerAndBGTest();  // プレーヤーと壁とのあたり判定
@@ -44,6 +46,7 @@ private:
 	void TriggerAndBGTest(); // 背景トリガーと背景の判定テスト
 	void InitBoxVertices();
 	void PlayerAttackAndEnemyTest();	//プレイヤーの攻撃ボックスとエネミーの当たり判定
+	void EnemyAttackBoxAndPlayerTest();    //エネミーの攻撃ボックスとプレイヤーの当たり判定
 	void EnemyAttackAndPlayerTest();	//敵弾とプレイヤーの当たり判定
 	void PlayerABandEnemyBBTest();		//プレイヤーの攻撃ボックスと敵の弾の当たり判定
 	void EnemyBBTestandBGTest();		//敵の弾と壁との当たり判定

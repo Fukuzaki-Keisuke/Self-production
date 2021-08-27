@@ -61,17 +61,17 @@ TestScene::TestScene()
 	//同じ敵を複数用意する
 	//エネミーの初期位置
 
-	//////雑魚エネミー1 左上
-	//mEnemyBase = new BlackKnightActor;
-	//mEnemyBase->SetPosition(Vector3(-800, 1300, 0));
+	////連射エネミー1 左上
+	mEnemyBase = new BlackKnightActor;
+	mEnemyBase->SetPosition(Vector3(-800, 1300, 0));
 
-	//雑魚エネミー2 右上
+	//連射エネミー2 右上
 	mEnemyBase = new BlackKnightActor;
 	mEnemyBase->SetPosition(Vector3(1000, 1300, 0));
 
-	//近接のみのエネミー
+	//単発エネミー
 	mEnemyBase = new NearEnemy;
-	mEnemyBase->SetPosition(Vector3(-800, 1300, 40));
+	mEnemyBase->SetPosition(Vector3(-150, 800, 40));
 }
 
 TestScene::~TestScene()

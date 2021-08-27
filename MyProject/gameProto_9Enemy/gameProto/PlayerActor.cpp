@@ -293,6 +293,35 @@ void PlayerActor::HitEnemy(class BoxCollider* playerBox, BoxCollider* enemyBox)
 	}
 }
 
+//“G‚Ì‹ßÚUŒ‚‚Ì“–‚½‚è”»’è(ƒ_ƒ[ƒW)
+void PlayerActor::HitEnemyAttackDamage(BoxCollider* hitPlayerBox, BoxCollider* mEnemyAttackBox)
+{
+	//“G‚ÌUŒ‚‚ª“–‚½‚Á‚½‚Æ‚«
+	if (mHitBox == hitPlayerBox &&
+		mEnemyAttackBox->GetType() == EnumPhysicsType::EnumEnemyShot)
+	{
+		printf("“G‚ÌUŒ‚‚ª“–‚½‚Á‚Ä‚é‚æ\n");
+
+		mPHitPoint -= 1;
+
+		if (mNowState != PlayerState::PLAYER_STATE_HIT)
+		{
+			mNextState = PlayerState::PLAYER_STATE_HIT;
+		}
+	}
+
+	//‹ó’†‚Å“–‚½‚Á‚½‚Æ‚«‚É•‚‚¢‚Ä‚µ‚Ü‚¤‚Ì‚ğ–h‚®
+	if (mIsJump)
+	{
+		mOnGroundChk = true;
+		mIsJump = false;
+		mJumpVec = Vector3(0, 0, -1.0f);
+		mPosition += mJumpVec;
+		return;
+	}
+}
+
+
 //“G‚Æ‚Ì“–‚½‚è”»’è(ƒ_ƒ[ƒW)
 void PlayerActor::HitBullet(BoxCollider* hitPlayerBox, BoxCollider* mEnemyShotBox)
 {

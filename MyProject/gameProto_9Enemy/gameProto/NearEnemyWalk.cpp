@@ -47,14 +47,14 @@ EnemyStateEnum NearEnemyWalk::Update(float deltaTime)
 			mWalkRemainTime = mWalkTime;
 			mTurnNum++;
 
-			////‹K’è‰ñ”U‚èŒü‚¢‚½‚çŒ©“n‚µs“®‚ÉˆÚs
-			//if (mTurnNum >= mTurnMaxNum)
-			//{
-			//	// Œ©“n‚µs“®‚ÉˆÚs
-			//	mOwnerActor->SetForwardVec(forward);
-			//	mOwnerActor->SetComputeWorldTransform();
-			//	return EnemyStateEnum::Idle;
-			//}
+			//‹K’è‰ñ”U‚èŒü‚¢‚½‚çŒ©“n‚µs“®‚ÉˆÚs
+			if (mTurnNum >= mTurnMaxNum)
+			{
+				// Œ©“n‚µs“®‚ÉˆÚs
+				mOwnerActor->SetForwardVec(forward);
+				mOwnerActor->SetComputeWorldTransform();
+				return EnemyStateEnum::LookAround;
+			}
 		}
 	}
 	else

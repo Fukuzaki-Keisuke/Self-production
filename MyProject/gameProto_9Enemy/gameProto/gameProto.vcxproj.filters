@@ -64,6 +64,9 @@
     <Filter Include="ソース ファイル\Enemy\sampleEnemy">
       <UniqueIdentifier>{ee8c6d3c-3b08-4903-a7a9-0da1fd00b050}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\Enemy\sampleEnemy">
+      <UniqueIdentifier>{ef3d73ec-806d-4d11-b0a3-c3b1c818c968}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -231,9 +234,6 @@
     <ClCompile Include="EnemyAttack.cpp">
       <Filter>ソース ファイル\Enemy\sampleEnemy</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyBehaviorComponent.cpp">
-      <Filter>ソース ファイル\Enemy\sampleEnemy</Filter>
-    </ClCompile>
     <ClCompile Include="EnemyDeath.cpp">
       <Filter>ソース ファイル\Enemy\sampleEnemy</Filter>
     </ClCompile>
@@ -254,6 +254,24 @@
     </ClCompile>
     <ClCompile Include="NearEnemyChase.cpp">
       <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyAttack.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyAttack2.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyLookAround.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyHit.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="NearEnemyDie.cpp">
+      <Filter>ソース ファイル\Enemy\NearEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBehaviorComponent.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -377,16 +395,7 @@
     <ClInclude Include="EnemyState.h">
       <Filter>ヘッダー ファイル\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyPatrol.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="EnemyBehaviorComponent.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyLookAround.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="BlackKnightActor.h">
       <Filter>ヘッダー ファイル\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="PlayerActor.h">
@@ -401,15 +410,6 @@
     <ClInclude Include="PlayerActorStateLightAttack3.h">
       <Filter>ヘッダー ファイル\PlayerActorState</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyHit.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyDeath.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyChase.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="TestScene.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
     </ClInclude>
@@ -421,9 +421,6 @@
     </ClInclude>
     <ClInclude Include="GameOverScene.h">
       <Filter>ヘッダー ファイル\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyAttack.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="EnemyShot.h">
       <Filter>ヘッダー ファイル\Enemy</Filter>
@@ -457,6 +454,42 @@
     </ClInclude>
     <ClInclude Include="NearEnemyChase.h">
       <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyAttack.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyAttack2.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyLookAround.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyHit.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="NearEnemyDie.h">
+      <Filter>ヘッダー ファイル\Enemy\NearEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackKnightActor.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyAttack.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyChase.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyDeath.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyHit.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyLookAround.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyPatrol.h">
+      <Filter>ヘッダー ファイル\Enemy\sampleEnemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

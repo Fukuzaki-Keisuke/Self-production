@@ -60,10 +60,10 @@ EnemyStateEnum NearEnemyChase::Update(float deltaTime)
 
     //位置によってステートを変える
 
-    /*if (distance <= 800)
+    if (distance <= 1000)
     {
         return EnemyStateEnum::Attack1;
-    }*/
+    }
 
     return EnemyStateEnum::Chase;
 }

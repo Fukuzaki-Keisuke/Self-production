@@ -64,19 +64,7 @@ BlackKnightActor::BlackKnightActor()
 	mHitBox->SetObjectBox(enemyBox);
 	mHitBox->SetArrowRotate(false);
 
-	//// プレーヤーの足元を調べるボックスを作成　ボックス高1/4, ボックス上面が原点に来るようにする
-	//AABB groundBox;
-	//groundBox = enemyBox;
-	//groundBox.mMin.x *= 0.8f;
-	//groundBox.mMin.y *= 0.8f;
-	//groundBox.mMax.x *= 0.8f;
-	//groundBox.mMax.y *= 0.8f;
-	//groundBox.mMin.z = -2.0f;  //ジャンプ時に引っかからない高さ
-	//groundBox.mMax.z *= 0.0f;
-	//mHitGroundBox = new BoxCollider(this, EnumPhysicsType::EnumEnemy);
-	//mHitGroundBox->SetObjectBox(groundBox);
-
-	//エネミーの近接攻撃用ボックス(現在はなし)
+	//エネミーの近接攻撃用ボックス
 	AABB enemyForward;
 	enemyForward.mMin.x = enemyBox.mMax.x;
 	enemyForward.mMin.y = enemyBox.mMin.y;
