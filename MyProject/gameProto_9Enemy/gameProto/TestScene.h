@@ -16,8 +16,6 @@ public:
 
 	class Texture* mTexture;
 	class Texture* mTexture2;
-	class Texture* mTexture3;
-	class Texture* mTexture4;
 	class BitmapText* mFont;
 
 	//ƒvƒŒƒCƒ„[

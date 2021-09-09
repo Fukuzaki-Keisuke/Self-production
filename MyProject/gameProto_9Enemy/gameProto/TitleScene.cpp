@@ -6,9 +6,9 @@
 
 TitleScene::TitleScene()
 {
-	mTexture = RENDERER->GetTexture("assets/Title/Title1.png");
+	mTexture = RENDERER->GetTexture("assets/Title/Title.png");
 	mTexture2 = RENDERER->GetTexture("assets/Title/PtS.png");
-	//mTexture3 = RENDERER->GetTexture("assets/Title/TitleChan.png");
+	mTexture3 = RENDERER->GetTexture("assets/Title/TitleChan.png");
 }
 
 TitleScene::~TitleScene()
@@ -39,7 +39,7 @@ void TitleScene::draw()
 	RENDERER->SpriteDrawBegin();
 	RENDERER->DrawTexture(mTexture, Vector2(640.0, 385.0));
 	RENDERER->DrawTexture(mTexture2, Vector2(640.0, 450.0), 0.2f * fabs(sinf(anim)) + 1.0f, fabs(sinf(anim)));
-	//RENDERER->DrawTexture(mTexture3, Vector2(640.0, 355.0), 1.0f, fabs(sinf(anim)));
+	RENDERER->DrawTexture(mTexture3, Vector2(640.0, 355.0), 1.0f, fabs(sinf(anim)));
 	RENDERER->SpriteDrawEnd();
 
 	//‰æ–Ê‚ÌƒtƒŠƒbƒv
