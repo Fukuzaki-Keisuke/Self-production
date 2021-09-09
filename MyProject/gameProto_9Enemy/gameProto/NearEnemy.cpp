@@ -42,7 +42,7 @@ NearEnemy::NearEnemy()
 	mSkelMeshComponent->SetSkeleton(RENDERER->GetSkeleton("Assets/Enemy/NearEnemy/NearEnemy_Idle.gpskel"));
 
 	//アニメーションの読み込み
-	//最後のtrueはループ"する"か"しない"か
+	//最後のtrueはループするかしないか
 	mAnimations.emplace(EnemyStateEnum::Idle, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Idle_Anim.gpanim",false));
 	mAnimations.emplace(EnemyStateEnum::Walk, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Walk1.gpanim", true));
 	mAnimations.emplace(EnemyStateEnum::Chase, RENDERER->GetAnimation("Assets/Enemy/NearEnemy/NearEnemy_Walk2.gpanim", true));

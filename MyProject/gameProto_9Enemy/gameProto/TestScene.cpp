@@ -52,14 +52,14 @@ TestScene::TestScene()
 	Vector3 offs(-60, 380, 20);
 	level->LoadLevel("assets/Map/MapStaticMesh.gpmesh", "assets/Map/collision.json", offs);
 
-	//UI関係をここに書いていく
-	//ボタンのテクスチャ
-	mTexture = RENDERER->GetTexture("Assets/UI/CameraMove.png");
+	//UI
+	mTexture = RENDERER->GetTexture("assets/UI/Move.png");
+	mTexture1 = RENDERER->GetTexture("assets/UI/View.png");
+	mTexture2 = RENDERER->GetTexture("assets/UI/Attack.png");
+	mTexture3 = RENDERER->GetTexture("assets/UI/Jump.png");
  	mFont = new BitmapText;
 	mFont->SetFontImage(16, 6, "assets/font.png");
 	mFont->ReMapText(" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\tabcdefghijklmnopqrstuvwxyz{|}~\\");
-
-	mTexture2 = RENDERER->GetTexture("Assets/UI/CameraMove.png");
 
 	//同じ敵を複数用意する
 	//エネミーの初期位置
@@ -129,7 +129,7 @@ SceneBase *TestScene::update()
 		float deltaTime = GAMEINSTANCE.GetDeltaTime();
 		//timeにdeltaTimeを加算していく
 		time = time + deltaTime;
-		if (time > 3.0f)
+		if (time > 0.0f)
 		{
 			GAMEINSTANCE.sceneShutdown();
 			return new GameOverScene;
@@ -170,9 +170,10 @@ void TestScene::draw()
 	RENDERER->SpriteDrawBegin();
 	//RENDERER->DrawTexture(mTexture, 3, 2, 2, Vector2(100.0, 100.0), 1.0f, 1.0f);
 	//ヤドンの画像
-	RENDERER->DrawTexture(mTexture, Vector2(100.0, 100.0));
-
-	RENDERER->DrawTexture(mTexture2, Vector2(300.0, 100.0));
+	RENDERER->DrawTexture(mTexture, Vector2(100.0, 650.0));
+	RENDERER->DrawTexture(mTexture1, Vector2(300.0, 650.0));
+	RENDERER->DrawTexture(mTexture2, Vector2(500.0, 650.0));
+	RENDERER->DrawTexture(mTexture3, Vector2(700.0, 650.0));
 
 	char buf[256];
 

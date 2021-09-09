@@ -27,7 +27,7 @@ BlackKnightActor::BlackKnightActor()
 	mWalkSpeed  = 100.0f;
 	mRunSpeed   = 200.0f;
 	mTurnSpeed  = Math::Pi;
-	mHitPoint   = 2;
+	mHitPoint   = 3;
 
 	//ínñ Ç∆ÇÃê›íuîªíË
 	mIsOnGround = true;

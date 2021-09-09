@@ -15,7 +15,10 @@ public:
 	class LevelManager* mLevel;
 
 	class Texture* mTexture;
+	class Texture* mTexture1;
 	class Texture* mTexture2;
+	class Texture* mTexture3;
+
 	class BitmapText* mFont;
 
 	//ƒvƒŒƒCƒ„[
