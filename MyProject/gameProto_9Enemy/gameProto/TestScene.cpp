@@ -54,12 +54,14 @@ TestScene::TestScene()
 
 	//UI関係をここに書いていく
 	//ボタンのテクスチャ
-	mTexture = RENDERER->GetTexture("Assets/UI/CameraMove.png");
+	mTexture = RENDERER->GetTexture("Assets/UI/Move.png");
  	mFont = new BitmapText;
 	mFont->SetFontImage(16, 6, "assets/font.png");
 	mFont->ReMapText(" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_\tabcdefghijklmnopqrstuvwxyz{|}~\\");
 
-	mTexture2 = RENDERER->GetTexture("Assets/UI/CameraMove.png");
+	mTexture2 = RENDERER->GetTexture("Assets/UI/View.png");
+	mTexture3 = RENDERER->GetTexture("Assets/UI/Attack.png");
+	mTexture4 = RENDERER->GetTexture("Assets/UI/Jump.png");
 
 	//同じ敵を複数用意する
 	//エネミーの初期位置
@@ -129,7 +131,7 @@ SceneBase *TestScene::update()
 		float deltaTime = GAMEINSTANCE.GetDeltaTime();
 		//timeにdeltaTimeを加算していく
 		time = time + deltaTime;
-		if (time > 3.0f)
+		if (time > 0.0f)
 		{
 			GAMEINSTANCE.sceneShutdown();
 			return new GameOverScene;
@@ -169,10 +171,11 @@ void TestScene::draw()
 	// 2D描画
 	RENDERER->SpriteDrawBegin();
 	//RENDERER->DrawTexture(mTexture, 3, 2, 2, Vector2(100.0, 100.0), 1.0f, 1.0f);
-	//ヤドンの画像
-	RENDERER->DrawTexture(mTexture, Vector2(100.0, 100.0));
-
-	RENDERER->DrawTexture(mTexture2, Vector2(300.0, 100.0));
+	//操作UI画像
+	RENDERER->DrawTexture(mTexture, Vector2(1200.0,	 210.0));
+	RENDERER->DrawTexture(mTexture2, Vector2(1200.0, 300.0));
+	RENDERER->DrawTexture(mTexture3, Vector2(1200.0, 450.0));
+	RENDERER->DrawTexture(mTexture4, Vector2(1200.0, 600.0));
 
 	char buf[256];
 
